@@ -1,0 +1,52 @@
+void setup() {
+  // put your setup code here, to run once:
+pinMode(13, OUTPUT);
+pinMode(12, OUTPUT);
+pinMode(11,OUTPUT);
+pinMode(3,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ digitalWrite(12,HIGH);
+ analogWrite(11, 255); 
+
+ digitalWrite(13, HIGH);
+ analogWrite(3,255);
+ delay(100);
+                              //don't have to change the analog value as it doesn't change itself
+}
+
+void moveforward(){
+digitalWrite(12,1);           // wheel
+digitalWrite(11, 255); 
+                               // 1 = HIGH , 0 = LOW
+ digitalWrite(13, 1);
+ digitalWrite(3,255);       // wheel
+}
+
+void movebackward(){
+digitalWrite(12,0);
+analogWrite(11,255);   // wheel
+
+digitalWrite(13, 0);
+analogWrite(3, 255);   // wheel
+}
+
+ void turnleft(){
+  digitalWrite(12, 1);  // wheel
+  analogWrite(11, 255);
+
+  digitalWrite(13, 0);    //wheel
+  analogWrite(3, 0);
+ }
+
+
+void turnright(){
+ digitalWrite(12, 0);  // wheel
+  analogWrite(11, 0);
+
+  digitalWrite(13, 1);    //wheel
+  analogWrite(3, 255); 
+}
+//end of program
